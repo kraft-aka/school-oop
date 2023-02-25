@@ -48,18 +48,18 @@ class Primary extends School {
 class Middle extends School {
   constructor(name, numberOfStudents) {
     super(name, numberOfStudents)
+    this._level = 'middle';
   }
 }
 
 class High extends School {
   constructor(name, numberOfStudents) {
     super(name, numberOfStudents);
+    this._level = 'high';
     this._sportsTeams = [];
+  }
+  get sportsTeams() {
+    return `Theas are teams of our school: [...${this._sportsTeams}]`;
   }
 }
 
-
-const goethe = new School('Goetheschule','primary', '250')
-console.log(goethe.name)
-console.log(goethe.numberOfStudents)
-console.log(goethe.numberOfStudents = 25)
