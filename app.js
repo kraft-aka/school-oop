@@ -16,7 +16,11 @@ class School {
   }
 
   set numberOfStudents(number) {
-    this._numberOfStudents = this._numberOfStudents + number;
+    if (typeof this._numberOfStudents === 'number') {
+      return this._numberOfStudents = number
+    } else {
+      console.log('Invalid input: numberOfStudents must be set to a Number.');
+    }
   }
 
   quickFacts() {
@@ -41,8 +45,15 @@ class Middle extends School {
   }
 }
 
+class High extends School {
+  constructor(name, level, numberOfStudents) {
+    super(name, level, numberOfStudents);
+    this._sportsTeams = [];
+  }
+}
 
-// const goethe = new School('Goetheschule','primary', 250)
-// console.log(goethe.name)
-// console.log(goethe.numberOfStudents)
-// console.log(goethe.numberOfStudents = 25)
+
+const goethe = new School('Goetheschule','primary', '250')
+console.log(goethe.name)
+console.log(goethe.numberOfStudents)
+console.log(goethe.numberOfStudents = 25)
