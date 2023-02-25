@@ -3,7 +3,7 @@ class School {
     this._name = name;
     this._level = level;
     this._numberOfStudents = numberOfStudents;
-  } 
+  }
   get name() {
     return this._name;
   }
@@ -20,15 +20,20 @@ class School {
   }
 
   quickFacts() {
-    return `${this._name} ${this._level} ${this._numberOfStudents}`
+    return `${this._name} ${this._level} ${this._numberOfStudents}`;
   }
 
   static pickSubstituteTeachers() {
-    return 
+    return;
   }
-
 }
 
+class Primary extends School {
+  constructor(name,level, numberOfStudents, pickupPolicy) {
+    super(name,level,numberOfStudents);
+    this._pickupPolicy = pickupPolicy;
+  }
+}
 // const goethe = new School('Goetheschule','primary', 250)
 // console.log(goethe.name)
 // console.log(goethe.numberOfStudents)
