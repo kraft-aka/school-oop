@@ -14,9 +14,22 @@ class School {
   get numberOfStudents() {
     return this._numberOfStudents;
   }
-  
+
+  set numberOfStudents(number) {
+    this._numberOfStudents = this._numberOfStudents + number;
+  }
+
+  quickFacts() {
+    return `${this._name} ${this._level} ${this._numberOfStudents}`
+  }
+
+  static pickSubstituteTeachers() {
+    return 
+  }
+
 }
 
 // const goethe = new School('Goetheschule','primary', 250)
 // console.log(goethe.name)
 // console.log(goethe.numberOfStudents)
+// console.log(goethe.numberOfStudents = 25)
