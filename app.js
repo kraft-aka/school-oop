@@ -34,6 +34,14 @@ class Primary extends School {
     this._pickupPolicy = pickupPolicy;
   }
 }
+
+class Middle extends School {
+  constructor(name,level, numberOfStudents) {
+    super(name, level, numberOfStudents)
+  }
+}
+
+
 // const goethe = new School('Goetheschule','primary', 250)
 // console.log(goethe.name)
 // console.log(goethe.numberOfStudents)
