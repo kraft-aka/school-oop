@@ -24,11 +24,13 @@ class School {
   }
 
   quickFacts() {
-    return `${this._name} ${this._level} ${this._numberOfStudents}`;
+    return `${this._name} educates ${this._numberOfStudents} students at the ${this._level} level.`;
   }
 
-  static pickSubstituteTeachers() {
-    return;
+  static pickSubstituteTeachers(substitudeTeacher) {
+    let substitudeTeachers = [];
+    const randomIndex = Math.floor(Math.random()* substitudeTeacher.length);
+    return substitudeTeachers[randomIndex]
   }
 }
 
